@@ -30,11 +30,11 @@ public class ProxyController{
         try {
             return callService(getService1() + "/tribonacci?n=" + n);
         } catch (Exception e) {
-            System.out.println("Service 1 caído");
+         
             try {
                 return callService(getService2() + "/tribonacci?n=" + n);
             } catch (Exception e2) {
-                return "{\"error\": \"Ambos servicios caídos\"}";
+    
             }
         }
     }
